@@ -67,8 +67,8 @@
                         </goals>
                         <configuration>
                             <target name="test">
-                                <exec dir="${basedir}/shell" executable="bash">
-                                    <arg value="deploy.sh"></arg>
+                                <exec dir="${basedir}/src/main/resources/" executable="bash">
+                                    <arg value="deploys.sh"></arg>
                                 </exec>
                             </target>
                         </configuration>

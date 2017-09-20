@@ -16,20 +16,19 @@
 
 <!-- Put site-specific property overrides in this file. -->
 
-<configuration>
 
 
-  <configuration>
-    <property>
-      <name>fs.defaultFS</name>
-      <value>hdfs://172.31.3.103:9000</value>
-    </property>
+  <!--<configuration>-->
+    <!--<property>-->
+      <!--<name>fs.defaultFS</name>-->
+      <!--<value>hdfs://172.31.3.103:9000</value>-->
+    <!--</property>-->
 
-    <property>
-      <name>io.file.buffer.size</name>
-      <value>131072</value>
-    </property>
-  </configuration>
+    <!--<property>-->
+      <!--<name>io.file.buffer.size</name>-->
+      <!--<value>131072</value>-->
+    <!--</property>-->
+  <!--</configuration>-->
 <!--<property> -->
   <!--<name>fs.defaultFS</name>  -->
   <!--<value>hdfs://linkmehadoop-1:9000</value> -->
@@ -41,4 +40,4 @@
 </property> 
 -->
  
-</configuration>
+
