@@ -4,7 +4,19 @@ echo "run script is running"
 
 sleep 1
 APP_NAME=quickstart
-echo -e  'application: $APP_NAME'
+echo -e  'application:\t'$APP_NAME
+# 这里的-d 参数判断$myPath是否存在
+myPath=/hadoopJars/$APP_NAME
+myFile=/hadoopJars/run.sh
+echo "delete last raw file & dirctory"
+if [ -d "$myPath"]; then
+  rm -fr /hadoopJars/$APP_NAME
+fi
+
+#if [ -f "$myFile" ]; then
+#  rm -fr /hadoopJars/run.sh
+#fi
+echo "delete raw file complete!"
 mkdir -p /hadoopJars/$APP_NAME
 sudo -i chown -R hadoop:hadoop /hadoopJars/$APP_NAME
 echo "ok change the application directory user to :hadoop"
@@ -23,7 +35,7 @@ HADOOP_BIN_PATH=/usr/local/hadoop-2.8.1/bin/hadoop
 JARPATH=/hadoopJars/$APP_NAME/$JAR
 MAIN_CLASS=HadoopStart
 INPUT_DIR=/testdata/
-OUTPUT_DIR=/testouttmpsd
+OUTPUT_DIR=/testouttmpsdfdk
 
 sleep 2
 echo "task is running jar"
